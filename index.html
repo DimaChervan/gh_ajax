@@ -61,6 +61,7 @@
     <div class="error-message hide"></div>
     <script src="js/ajax.js"></script>
     <script>
+	(function(){
         var sendBtn = document.getElementsByClassName('send')[0];
         var inputLogin = document.getElementsByTagName('input')[0];
         sendBtn.addEventListener('click', function () {
@@ -72,6 +73,7 @@
                 getUserData(inputLogin.value);
             }
         });
+	})();
     </script>
 </body>
 </html>
