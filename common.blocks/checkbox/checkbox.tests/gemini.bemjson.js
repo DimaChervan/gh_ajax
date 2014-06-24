@@ -21,7 +21,7 @@
             tag : 'p', content : {
                 block : 'checkbox',
                 mods : { disabled : true },
-                text : 'second',    
+                text : 'second'    
             },
             attrs : { style : 'width : 100px;' },
             cls : 'default-disabled'
@@ -30,7 +30,7 @@
             tag : 'p', content : {
                 block : 'checkbox',
                 mods : { disabled : true, checked : true },
-                text : 'third',   
+                text : 'third'   
             },
             attrs : { style : 'width : 100px;' },
             cls : 'default-disabled-checked'
@@ -39,49 +39,60 @@
         { tag : 'hr' },
 
         { tag : 'h2', content : 'normal' },
-        [
-            {
+        {   
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'm' },
-                text : 'size_m',
-                cls : 'normal-size_m-enabled'
+                text : 'size_m'  
             },
-            {
+            cls : 'normal-size_m-enabled'
+        },
+        {   
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'm', disabled : true },
-                text : 'size_m',
-                cls : 'normal-size_m-disabled'
+                text : 'size_m'
             },
-            {
+            cls : 'normal-size_m-disabled'
+        },
+        {
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'm', disabled : true, checked : true },
-                text : 'size_m',
-                cls : 'normal-size_m-disabled-checked'
+                text : 'size_m'   
             },
-            {
+            cls : 'normal-size_m-disabled-checked'
+        },
+        {
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'l' },
-                text : 'size_l',
-                cls : 'normal-size_l-enabled'
+                text : 'size_l'   
             },
-            {
+            cls : 'normal-size_l-enabled'
+        },
+        {
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'l', disabled : true },
-                text : 'size_l',
-                cls : 'normal-size_l-disabled'
+                text : 'size_l'   
             },
-            {
+            cls : 'normal-size_l-disabled'
+        },
+        {
+            block : 'test',
+            content : {
                 block : 'checkbox',
                 mods : { theme : 'normal', size : 'l', disabled : true, checked : true },
-                text : 'size_l',
-                cls : 'normal-size_l-disabled-checked'
-            }
-        ].map(function(block) {
-            return { 
-                tag : 'p', 
-                content : block 
-            };
-        }),
+                text : 'size_l'   
+            },
+            cls : 'normal-size_l-disabled-checked'
+        },
 
         { tag : 'hr' },
 

@@ -10,13 +10,13 @@ gemini.suite('checkbox', function(root) {
                 checkboxEnabledSelector = checkboxSelector + '-enabled',
                 checkboxDisabledSelector = checkboxSelector + '-disabled',
                 checkboxCheckedDisabledSelector = checkboxDisabledSelector + '-checked',
-                testArea = !!~test.indexOf('button') ? checkboxEnabledSelector : checkboxEnabledSelector + ' .checkbox__box';
-        
+                selectorClick = !!~test.indexOf('default') ? checkboxEnabledSelector + ' .checkbox__control' : checkboxEnabledSelector;
+                
             gemini.suite(test + '-enabled', function(suite) {
                 suite
-                    .setCaptureElements(checkboxEnabledSelector, testArea)
+                    .setCaptureElements(checkboxEnabledSelector)
                     .before(function(actions, find) {
-                        this.checkbox = find(checkboxEnabledSelector + ' .checkbox__control');
+                        this.checkbox = find(selectorClick);
                     })
                     .capture('plain') 
                     .capture('hovered', function(actions) {
