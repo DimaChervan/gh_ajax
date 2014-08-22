@@ -5,13 +5,15 @@ block('rating').elem('rate') (
                 elem : 'input',
                 attrs : {
                     id : this.generateId(),
-                    name : this.ctx.name
+                    name : this._name,
+                    value : this.ctx.value
                 }
             },
             {
                 elem : 'label',
                 attrs : {
-                    for : this.generateId()
+                    for : this.generateId(),
+                    title : this.ctx.content && this.ctx.content.content
                 }
             }
         ]);
